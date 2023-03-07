@@ -1,10 +1,11 @@
 import './App.css';
+import ARPortal from './AR/ARPortal';
 
 function App() {
   return (
-    <>
-      <h1>Hello there</h1>
-    </>
+    <div style={{padding: "40px"}}>
+      <ARPortal />
+    </div>
   );
 }
 

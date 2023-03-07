@@ -3,30 +3,28 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
   <head>
+
+  <style>
+  </style>
   </head>
 
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
-  <body style="margin : 0px; overflow: hidden;">
+  <body style="margin: 0px; overflow: hidden;">
     <div id="root"></div>
 
-    <a-scene embedded arjs>
-      <a-marker preset="hiro">
-          <!-- we use cors proxy to avoid cross-origin problems ATTENTION! you need to set up your server -->
-          <a-entity
-          position="0 0 0"
-          scale="0.03 0.03 0.03"
-          gltf-model="https://raw.githack.com/AR-js-org/AR.js/master/aframe/examples/image-tracking/nft/trex/scene.gltf"
-          ></a-entity>
-      </a-marker>
-      <a-entity camera></a-entity>
+    <a-scene embedded arjs
+        vr-mode-ui="enabled: false">
+        <a-marker preset='hiro'>
+            <a-entity
+                position="0 0 0"
+                scale="1 1 1"
+                gltf-model="/models/shiba/scene.gltf"
+            ></a-entity>
+        </a-marker>
+        <a-entity camera></a-entity>
     </a-scene>
 
   </body>
-</html>
-
-<!DOCTYPE html>
-<html>
-    <!-- we import arjs version without NFT but with marker + location based support -->
 </html>
