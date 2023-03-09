@@ -3,7 +3,8 @@ import ARPortal from './AR/ARPortal';
 
 function App() {
   return (
-    <div style={{padding: "40px"}}>
+    <div>
+      <h1>App</h1>
       <ARPortal />
     </div>
   );
