@@ -28,7 +28,18 @@ code {
     visibility: visible;
 }
 
-#popup-info {
+#marker-info {
   padding: 3px;
   text-align: center;
+}
+
+#signin {
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
+}
+#collect {
+  text-align: center;
+  padding: 3px;
+  margin: 3px;
 }

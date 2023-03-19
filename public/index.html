@@ -13,7 +13,9 @@
   <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
 
   <script src="./js/info.js"></script>
+  <script src="./js/firebase.js" type="module"></script>
   <script src="./js/markerEvents.js"></script>
+  <script src="./js/progress.js" type="module"></script>
 
   <body style="margin: 0px; overflow: hidden;">
     <div id="root"></div>
@@ -38,7 +40,17 @@
     </a-scene>
 
     <div class="popup" id="popup">
-      <h1 id="popup-info">Congratulations on finding marker </h1>
+      <h1 id="marker-info"></h1>
+      <div id="signin-collect">
+        <div id="signin">
+          Sign in to track progress
+          <button>Sign in</button>
+        </div>
+        <div id="collect">
+          Tap here to collect marker
+          <button>Collect</button>
+        </div>
+      </div>
     </div>
 
 
