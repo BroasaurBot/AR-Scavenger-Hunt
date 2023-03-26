@@ -35,11 +35,13 @@ code {
 
 #signin {
   text-align: center;
+  display: none;
   padding: 3px;
   margin: 3px;
 }
 #collect {
   text-align: center;
+  display: none;
   padding: 3px;
   margin: 3px;
 }

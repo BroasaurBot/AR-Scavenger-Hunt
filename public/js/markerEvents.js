@@ -1,3 +1,4 @@
+import { collectedMarkers } from "./progress.js";
 
 AFRAME.registerComponent('markerhandler', {
     init: function () {
@@ -10,19 +11,17 @@ AFRAME.registerComponent('markerhandler', {
       })
     }
   });
+  AFRAME.scenes[0].setAttribute('markerhandler','');
 
   var closeTimer;
   var activeMarker = -1;
-
   function foundMarker(id) {
-        //console.log("Marker Found: " +  String(id));
         activeMarker = id;
         clearTimeout(closeTimer)
         renderPopup(true, id);
   }
 
   function lostMarker(id) {
-        //console.log("Marker Lost: " +  String(id));
         clearTimeout(closeTimer)
         closeTimer = setTimeout(() => {
             renderPopup(false, -1);
@@ -36,7 +35,28 @@ AFRAME.registerComponent('markerhandler', {
     if (show == true) {
         popup.classList.add("show")
         text.innerHTML = "You found marker " + markerInfo[id].name;
+        
+        hasCollected(activeMarker, collectedMarkers);
     }else {
         popup.classList.remove("show")
     }
   }
+
+function hasCollected(id, collectedMarkers) {
+    let collect = document.querySelector('#collect p')
+    let button = document.querySelector('#collect button');
+
+    if (collectedMarkers.includes("Marker"+String(id))) {
+        collect.innerHTML = "You have already collected the marker";
+        button.style.visibility = "hidden";
+    } else {
+        collect.innerHTML = "Tap here to collected marker";
+        button.style.visibility = "visible";
+    }
+}
+
+const callHasCollected = () => {
+    hasCollected(activeMarker, collectedMarkers);
+}
+
+  export { activeMarker, callHasCollected };
