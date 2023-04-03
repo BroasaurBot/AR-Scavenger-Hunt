@@ -16,7 +16,7 @@ code {
 
 .popup {
   position: fixed;
-  visibility: hidden;
+  display: none;
   background-color: #0073c0;
   z-index: 10;
   top: 10%;
@@ -24,9 +24,6 @@ code {
   transform: translate(-50%, 0);
 }
 
-.popup.show {
-    visibility: visible;
-}
 
 #marker-info {
   padding: 3px;
@@ -35,13 +32,18 @@ code {
 
 #signin {
   text-align: center;
-  display: none;
   padding: 3px;
   margin: 3px;
 }
 #collect {
   text-align: center;
-  display: none;
   padding: 3px;
   margin: 3px;
+}
+
+.hide {
+  display: none;
+}
+.show {
+  display: block;
 }

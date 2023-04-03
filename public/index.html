@@ -4,9 +4,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./index.css">
   <head>
-
-  <style>
-  </style>
   </head>
 
   <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
@@ -17,6 +14,8 @@
   <script src="./js/markerEvents.js" type="module"></script>
   <script src="./js/progress.js" type="module"></script>
 
+ 
+
   <body style="margin: 0px; overflow: hidden;">
     <div id="root"></div>
 
@@ -26,6 +25,7 @@
                 position="0 0 0"
                 scale="1 1 1"
                 gltf-model="/models/shiba/scene.gltf"
+                animation = "property: rotation; to: 0 360 0; loop: true; dur: 10000"
             ></a-entity>
         </a-marker>
         <a-marker markerhandler type="barcode" value="1" smooth="true">
@@ -40,8 +40,10 @@
     </a-scene>
 
     <div class="popup" id="popup">
+
       <h1 id="marker-info"></h1>
       <div id="signin-collect">
+
         <div id="signin">
           <p>Sign in to track progress</p>
           <button>Sign in</button>
@@ -57,4 +59,12 @@
 
 
   </body>
+  <script>
+    // Workaround for an AR.js bug (https://github.com/jeromeetienne/AR.js/issues/410)
+    const sceneEl = document.querySelector('a-scene');
+    sceneEl.addEventListener('loaded', () => {
+    sceneEl.camera = new THREE.PerspectiveCamera();
+    });
+  </script>
+
 </html>

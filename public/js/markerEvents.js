@@ -15,6 +15,8 @@ AFRAME.registerComponent('markerhandler', {
 
   var closeTimer;
   var activeMarker = -1;
+
+  //This function is called when a marker is found
   function foundMarker(id) {
         activeMarker = id;
         clearTimeout(closeTimer)
@@ -42,16 +44,17 @@ AFRAME.registerComponent('markerhandler', {
     }
   }
 
+//Changes the rendering of popup
 function hasCollected(id, collectedMarkers) {
     let collect = document.querySelector('#collect p')
     let button = document.querySelector('#collect button');
 
     if (collectedMarkers.includes("Marker"+String(id))) {
-        collect.innerHTML = "You have already collected the marker";
-        button.style.visibility = "hidden";
+        collect.innerHTML = "Congratualtions! You have collected " + markerInfo[id].name + "!";
+        button.classList.add("hide");
     } else {
         collect.innerHTML = "Tap here to collected marker";
-        button.style.visibility = "visible";
+        button.classList.remove("hide");
     }
 }
 

@@ -4,5 +4,8 @@ const markerInfo = [
     },
     {
         name: "Painting"
+    },
+    {
+        name: "Firelings"
     }
 ]

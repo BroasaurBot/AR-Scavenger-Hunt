@@ -1,6 +1,6 @@
-import { onAuthStateChanged, signInWithRedirect } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
+import { onAuthStateChanged, signInWithRedirect, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import {auth, app, db, provider} from './firebase.js';
-import { updateDoc, arrayUnion, getDoc, doc, onSnapshot} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
+import { updateDoc, arrayUnion, getDoc, doc, onSnapshot, setDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
 import { activeMarker, callHasCollected } from './markerEvents.js';
 
 let collectedMarkers = [];
@@ -10,24 +10,40 @@ onAuthStateChanged(auth, (user) => {
 
     if (user) {
         console.log("Logged in " + user.displayName);
-        signin.style.display="none";
-        collect.style.display="inline";
+        collect.classList.remove("hide");
+        signin.classList.add("hide");
+
+        setupDocument(user);
 
         const onCollect = onSnapshot(doc(db, "users", user.uid), (doc) => {
-            collectedMarkers = doc.data().Collected;
-            console.log("Checking collected: ", collectedMarkers);
-
-            callHasCollected();
+            let data = doc.data();
+            if (data != undefined) {
+                collectedMarkers = data.Collected;
+                console.log("Collected: ", collectedMarkers);
+                callHasCollected();
+            }
         });
 
     } else {
         console.log("User not logged in");
-        collect.style.display="none";
-        signin.style.display="inline";
+        signin.classList.remove("hide");
+        collect.classList.add("hide");
     }
 })
 
+//Adds a document to the database if the user doesn't already have one
+async function setupDocument(user) {
+    const ref = doc(db, "users", user.uid);
+    if ((await getDoc(ref)).exists()) {
+        console.log("User already exists");
+    }else {
+        await setDoc(ref, {
+            Collected: []
+        });
+    }
+}
 
+//Checks if the users has already collected the marker with id
 async function alreadyCollected(id, user) {
     const querySnapshot = await getDoc(doc(db, "users", user.uid));
     if (querySnapshot.exists()) {
@@ -40,7 +56,9 @@ const signIn = () => {
 }
 document.querySelector('#signin button').addEventListener('click', signIn);
 
+
  const collectMarker = async () => {
+    if (activeMarker < 0) return;
     const collected = await alreadyCollected(activeMarker, auth.currentUser);
     if (!collected) {
         const ref = doc(db, "users", auth.currentUser.uid);
@@ -49,7 +67,6 @@ document.querySelector('#signin button').addEventListener('click', signIn);
         })
         console.log("Collected Marker")
     }
-
 }
 document.querySelector('#collect button').addEventListener('click', collectMarker);
 

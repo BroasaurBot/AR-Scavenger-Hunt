@@ -1,0 +1,11 @@
+Model Information:
+* title:	Firelings
+* source:	https://sketchfab.com/3d-models/firelings-4c6ff2f86d7e40a2a98414ea561f80f5
+* author:	tamminen (https://sketchfab.com/tamminen)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Firelings" (https://sketchfab.com/3d-models/firelings-4c6ff2f86d7e40a2a98414ea561f80f5) by tamminen (https://sketchfab.com/tamminen) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
