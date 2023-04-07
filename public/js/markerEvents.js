@@ -1,4 +1,5 @@
 import { collectedMarkers } from "./progress.js";
+import { renderTooltip } from "./topbar.js";
 
 AFRAME.registerComponent('markerhandler', {
     init: function () {
@@ -20,41 +21,44 @@ AFRAME.registerComponent('markerhandler', {
   function foundMarker(id) {
         activeMarker = id;
         clearTimeout(closeTimer)
-        renderPopup(true, id);
+        renderInspector(true, id);
   }
 
   function lostMarker(id) {
         clearTimeout(closeTimer)
         closeTimer = setTimeout(() => {
-            renderPopup(false, -1);
+            renderInspector(false, -1);
             activeMarker = -1;
         }, 5000);
   }
 
-  function renderPopup(show, id) {
-    let popup = document.getElementById('popup');
-    let text = document.getElementById('marker-info');
+  function renderInspector(show, id) {
+    let collect = document.querySelector('#marker-inspector > p')
+    const button = document.querySelector('#interact');
     if (show == true) {
-        popup.classList.add("show")
-        text.innerHTML = "You found marker " + markerInfo[id].name;
-        
         hasCollected(activeMarker, collectedMarkers);
     }else {
-        popup.classList.remove("show")
+        collect.innerHTML = "Go search for a marker";
+        button.classList.remove("rainbow");
+        renderTooltip("")
     }
   }
 
 //Changes the rendering of popup
 function hasCollected(id, collectedMarkers) {
-    let collect = document.querySelector('#collect p')
-    let button = document.querySelector('#collect button');
+    let collect = document.querySelector('#marker-inspector > p')
+    const button = document.querySelector('#interact');
 
-    if (collectedMarkers.includes("Marker"+String(id))) {
-        collect.innerHTML = "Congratualtions! You have collected " + markerInfo[id].name + "!";
-        button.classList.add("hide");
-    } else {
-        collect.innerHTML = "Tap here to collected marker";
-        button.classList.remove("hide");
+    if (activeMarker == id && id != -1) {
+      if (collectedMarkers.includes("Marker"+String(id))) {
+          collect.innerHTML = markerInfo[id].name + "!";
+          button.classList.remove("rainbow");
+          renderTooltip(markerInfo[id].description)
+      } else {
+          collect.innerHTML = "<-- Click here to collect " + markerInfo[id].name;
+          renderTooltip("New marker found!")
+          button.classList.add("rainbow");
+      }
     }
 }
 

@@ -13,6 +13,7 @@
   <script src="./js/firebase.js" type="module"></script>
   <script src="./js/markerEvents.js" type="module"></script>
   <script src="./js/progress.js" type="module"></script>
+  <script src="./js/topbar.js" type="module"></script>
 
  
 
@@ -39,23 +40,36 @@
         <a-entity camera></a-entity>
     </a-scene>
 
-    <div class="popup" id="popup">
 
-      <h1 id="marker-info"></h1>
-      <div id="signin-collect">
-
-        <div id="signin">
-          <p>Sign in to track progress</p>
-          <button>Sign in</button>
-        </div>
-
-        <div id="collect">
-          <p>Tap here to collect marker</p>
-          <button>Collect</button>
-        </div>
-      </div>
+  <div class="popup" id="topbar">
+    <div id="signIn" class="hide">
+      <p>Please <span style="font-weight:bold">sign in</span> to track progress</p>
+      <button class="button">
+        <img src="./icons/login.png" alt="Sign In">
+      </button>
+    </div>
+    <div id="tooltip" class="hide">
+      <p></p>
+    </div>
+    <div id="progression">
 
     </div>
+  </div> 
+
+  <div class="popup hide" id="bottombar">
+    <div id="marker-inspector">
+      <button id="interact" class="">
+        <img src="./icons/library_add.png" alt="add">
+      </button>
+      <p>
+        Go search for a marker
+      </p>
+      <button id="information" class="">
+        <img src="./icons/info.png" id='info' alt="info">
+        <img src="./icons/close.png" id='close' class="hide" alt="info">
+      </button>
+    </div>
+  </div>
 
 
   </body>

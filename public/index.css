@@ -16,34 +16,123 @@ code {
 
 .popup {
   position: fixed;
-  display: none;
-  background-color: #0073c0;
+  display: inline;
   z-index: 10;
-  top: 10%;
+  background-color: rgb(242, 248, 248);
+  border-radius: 15px;
+  border: 3px solid rgb(98, 98, 98);
+  padding: 5px;
+}
+
+#topbar {
+  top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
 }
-
-
-#marker-info {
-  padding: 3px;
-  text-align: center;
+#signIn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: between;
+  gap: 20px;
+}
+#marker-inspector {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
 }
 
-#signin {
-  text-align: center;
-  padding: 3px;
-  margin: 3px;
+.button {
+  height: 40px;
 }
-#collect {
-  text-align: center;
-  padding: 3px;
-  margin: 3px;
+img {
+  object-fit: contain;
+  height: 100%;
+}
+
+#bottombar {
+  bottom: 5%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  min-width: 15rem;
+}
+#interact { 
+  background-color: grey;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(44, 58, 136);
+  transform: translate(-50%, 0) scale(1.8);
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#information { 
+  background-color: grey;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgb(255, 247, 0);
+  transform: translate(50%, 0) scale(1.8);
+  padding: 5px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#interact img {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
+#information img {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
 }
 
 .hide {
   display: none;
 }
+#signIn.hide {
+  display: none;
+}
 .show {
   display: block;
+}
+
+
+.rainbow { 
+background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+background-size: 1800% 1800%;
+
+-webkit-animation: rainbow 1s ease infinite;
+-z-animation: rainbow 1s ease infinite;
+-o-animation: rainbow 1s ease infinite;
+  animation: rainbow 1s ease infinite;}
+
+@-webkit-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-moz-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@-o-keyframes rainbow {
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
 }

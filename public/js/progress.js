@@ -2,16 +2,18 @@ import { onAuthStateChanged, signInWithRedirect, signInWithPopup } from "https:/
 import {auth, app, db, provider} from './firebase.js';
 import { updateDoc, arrayUnion, getDoc, doc, onSnapshot, setDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
 import { activeMarker, callHasCollected } from './markerEvents.js';
+import { renderTooltip, renderTopBar } from "./topbar.js";
 
 let collectedMarkers = [];
 onAuthStateChanged(auth, (user) => {
-    const signin = document.getElementById('signin');
-    const collect = document.getElementById('collect');
+    const signin = document.getElementById('signIn');
+    const bottombar = document.getElementById('bottombar');
 
     if (user) {
         console.log("Logged in " + user.displayName);
-        collect.classList.remove("hide");
         signin.classList.add("hide");
+        bottombar.classList.remove("hide");
+        renderTopBar(false)
 
         setupDocument(user);
 
@@ -27,7 +29,7 @@ onAuthStateChanged(auth, (user) => {
     } else {
         console.log("User not logged in");
         signin.classList.remove("hide");
-        collect.classList.add("hide");
+        bottombar.classList.add("hide");
     }
 })
 
@@ -54,10 +56,10 @@ async function alreadyCollected(id, user) {
 const signIn = () => {
     signInWithRedirect(auth, provider);
 }
-document.querySelector('#signin button').addEventListener('click', signIn);
+document.querySelector('#signIn button').addEventListener('click', signIn);
 
 
- const collectMarker = async () => {
+const collectMarker = async () => {
     if (activeMarker < 0) return;
     const collected = await alreadyCollected(activeMarker, auth.currentUser);
     if (!collected) {
@@ -68,6 +70,6 @@ document.querySelector('#signin button').addEventListener('click', signIn);
         console.log("Collected Marker")
     }
 }
-document.querySelector('#collect button').addEventListener('click', collectMarker);
+document.querySelector('#interact').addEventListener('click', collectMarker);
 
 export { collectedMarkers }
