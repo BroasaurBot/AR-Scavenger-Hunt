@@ -7,7 +7,4 @@ const markerInfo = [
         name: "Painting",
         description: "This is a painting of a tree"
     },
-    {
-        name: "Firelings"
-    }
 ]
