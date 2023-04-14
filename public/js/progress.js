@@ -8,7 +8,7 @@ import { calculateCurrentScore, getTimeSinceStart, updateLeaderBoard, lbInfo} fr
 let collectedMarkers = [];
 let points = 0;
 
-onAuthStateChanged(auth, (user) => {
+await onAuthStateChanged(auth, (user) => {
     const signin = document.getElementById('signIn');
     const bottombar = document.getElementById('bottombar');
 
@@ -27,8 +27,7 @@ onAuthStateChanged(auth, (user) => {
                 console.log("Collected: ", collectedMarkers);
 
                 callHasCollected();
-                updateLeaderBoard(user.uid, points);
-                renderProgress();
+                updateLeaderBoard(user.uid, points).then(() => {renderProgress()});
             }
         });
 
@@ -36,6 +35,7 @@ onAuthStateChanged(auth, (user) => {
         console.log("User not logged in");
         signin.classList.remove("hide");
         bottombar.classList.add("hide");
+        renderTopBar(true)
     }
 
     console.log("Time since start: ", getTimeSinceStart());
@@ -64,7 +64,7 @@ async function alreadyCollected(id, user) {
 }
 
 const signIn = () => {
-    signInWithRedirect(auth, provider);
+    signInWithPopup(auth, provider);
 }
 document.querySelector('#signIn button').addEventListener('click', signIn);
 
@@ -79,9 +79,23 @@ const collectMarker = async () => {
             Count: increment(1),
             Points: increment(calculateCurrentScore())
         })
+        animateCollect();
         console.log("Collected Marker")
     }
 }
 document.querySelector('#interact').addEventListener('click', collectMarker);
+
+function animateCollect() {
+    const animation = document.querySelector('#Animation');
+    animation.querySelector("#character").innerHTML = "You found</br>" + markerInfo[activeMarker].name;
+    animation.querySelector("#points").innerHTML = "+" + calculateCurrentScore() + " pts";
+    animation.classList.remove("hide");
+    animation.classList.add("grow");
+
+    setTimeout(() => {
+        animation.classList.add("hide");
+        animation.classList.remove("grow");
+    }, 7000);
+}
 
 export { collectedMarkers, points }

@@ -1,7 +1,8 @@
 import {auth, app, db, provider} from './firebase.js';
 import { updateDoc, getDoc, doc, deleteDoc, collection, getDocs, setDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
 
-const start = new Date("April 6, 2023 00:00:00:000")
+const start = 1681084801000;
+//const officialStart = 1681689601000;
 const numberOfPositions = 20;
 const minPoints = 500;
 
@@ -9,12 +10,12 @@ let lbPos = -1;
 let leaderBoard = [];
 
 function calculateScore(time) {
-    return 100 + 100 * Math.exp(-0.6 * time);
+    return Math.floor(100 + 100 * Math.exp(-0.6 * time));
 }
 
 function getTimeSinceStart() {
     const now = new Date();
-    return (now.getTime() - start.getTime()) / (1000*60*60*24);
+    return (now.getTime() - start) / (1000*60*60*24);
 }
 
 function calculateCurrentScore() {
@@ -45,7 +46,7 @@ async function updateLeaderBoard(uid, points) {
         let i = 0;
         for (; i < leaderBoard.length && i < numberOfPositions; i++) {
             if (leaderBoard[i].Points < points) {
-                leaderBoard.splice(i, 0, {uid: uid, points: points, email: auth.currentUser.email});
+                leaderBoard.splice(i, 0, {uid: uid, Points: points, email: auth.currentUser.email});
                 break;
             }
         }
@@ -76,13 +77,17 @@ async function updateLeaderBoard(uid, points) {
     }
 }
 
-async function testData() {
+async function insertMin() {
     for(let i = 1; i < numberOfPositions + 1; i++) {
-        await setDoc(doc(db, "leaderboard", i.toString()), {
-            Points: (600 + (numberOfPositions - i) * 100),
-            uid: i.toString(),
-            email: "test" + i.toString() + "@test.com"
+        await setDoc(doc(db, "leaderboard", "M"+i.toString()), {
+            Points: 500 ,
+            uid: "M"+i.toString(),
         });
+    }
+}
+async function deleteAll() {
+    for(let i = 1; i < numberOfPositions + 1; i++) {
+        await deleteDoc(doc(db, "leaderboard", i.toString()));
     }
 }
 
@@ -90,7 +95,7 @@ function lbInfo(points) {
     let tier = "";
     let nextTier = 0;
 
-    if (lbPos != -1) {
+    if (lbPos != -1 && leaderBoard.length > 0) {
         tier = "Low tier prize";
         nextTier = leaderBoard[numberOfPositions / 2 - 1].Points - points + 1;
         if (lbPos <= numberOfPositions / 2) {
@@ -106,9 +111,21 @@ function lbInfo(points) {
             nextTier = points - leaderBoard[1].Points + 1;
         }
 
-        return {pos: lbPos, nextTier: nextTier, tier:tier};
+        //Determines the ending string: th, st, nd, rd
+        let ending = "th";
+        if (lbPos % 10 - 1  == 0) {
+            ending = "st";
+        } else if (lbPos % 10 - 2 == 0) {
+            ending = "nd";
+        } else if (lbPos % 10 - 3 == 0) {
+            ending = "rd";
+        }
+        const position = lbPos.toString() + ending;
+
+        return {pos: position, nextTier: nextTier, tier:tier};
+
     } else {
-        return{pos: -1, nextTier: minPoints - points, tier:"No prize"}
+        return{pos: -1, nextTier: minPoints - points,  tier:"No prize", p:points}
     }
 }
 

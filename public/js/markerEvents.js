@@ -19,17 +19,17 @@ AFRAME.registerComponent('markerhandler', {
 
   //This function is called when a marker is found
   function foundMarker(id) {
-        activeMarker = id;
-        clearTimeout(closeTimer)
-        renderInspector(true, id);
+    activeMarker = id;
+    clearTimeout(closeTimer)
+    renderInspector(true, id);
   }
 
   function lostMarker(id) {
-        clearTimeout(closeTimer)
-        closeTimer = setTimeout(() => {
-            renderInspector(false, -1);
-            activeMarker = -1;
-        }, 5000);
+    clearTimeout(closeTimer)
+    closeTimer = setTimeout(() => {
+        renderInspector(false, -1);
+        activeMarker = -1;
+    }, 10000);
   }
 
   function renderInspector(show, id) {
@@ -53,11 +53,11 @@ function hasCollected(id, collectedMarkers) {
       if (collectedMarkers.includes("Marker"+String(id))) {
           collect.innerHTML = markerInfo[id].name + "!";
           button.classList.remove("rainbow");
-          renderTooltip(markerInfo[id].description)
+          renderTooltip(markerInfo[id].description, markerInfo[id].name)
       } else {
           collect.innerHTML = "<-- Click here to collect " + markerInfo[id].name;
-          renderTooltip("New marker found!")
           button.classList.add("rainbow");
+          renderTooltip("");
       }
     }
 }

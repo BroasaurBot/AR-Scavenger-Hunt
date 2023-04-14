@@ -3,15 +3,17 @@ import {points, collectedMarkers} from "./progress.js";
 import {auth} from "./firebase.js";
 
 
-let topVisible = true;
+let topVisible = false;
 
-function renderTooltip(msg) {
+function renderTooltip(msg, name="") {
     let tooltip = document.querySelector('#tooltip');
-    if (msg == "") 
+    let topbar = document.getElementById("topbar");
+    if (msg == "") {
         tooltip.classList.add("hide")
-    else {
+    } else {
         tooltip.classList.remove("hide");
-        tooltip.querySelector("p").innerHTML = msg;
+        tooltip.querySelector("#characterName").innerHTML = name;
+        tooltip.querySelector("#description").innerHTML = msg;
     }
 }
 
@@ -23,6 +25,7 @@ function renderTopBar(t) {
     topVisible = t
 
     if (t == true) {
+        document.querySelector('#Animation').classList.add("hide")
         topbar.classList.remove("hide");
         close.classList.remove("hide");
         info.classList.add("hide");
@@ -55,10 +58,17 @@ function renderProgress() {
     const p = document.getElementById("points");
     p.innerHTML = points.toString() + "pts";
     const prize = document.getElementById("prize");
-    prize.innerHTML = info.tier ;
+    prize.innerHTML = info.pos + ": " + info.tier ;
 
     const motivation = document.getElementById("motivation");
-    const nextTier = "Earn " + info.nextTier.toString() + "pts to unlock the next tier!";
+    let nextTier = "";
+    if (info.tier == "Grand Prize") {
+        nextTier = "Watchout another competitor is " + info.nextTier.toString() + "pts behind!";
+    }else if (info.tier == "No Prize") {
+        nextTier = "Earn " + info.nextTier.toString() + "pts to reach the minimum!";
+    }else {
+        nextTier = "Earn " + info.nextTier.toString() + "pts to unlock the next tier!";
+    }
     motivation.innerHTML =  nextTier ;
 }
 

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Disney Magic Kingdoms Kevin
+* source:	https://sketchfab.com/3d-models/disney-magic-kingdoms-kevin-b73519bde656472aa6872c32fae2893c
+* author:	30thomasgorton (https://sketchfab.com/30thomasgorton)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Disney Magic Kingdoms Kevin" (https://sketchfab.com/3d-models/disney-magic-kingdoms-kevin-b73519bde656472aa6872c32fae2893c) by 30thomasgorton (https://sketchfab.com/30thomasgorton) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

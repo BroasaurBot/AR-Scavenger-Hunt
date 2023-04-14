@@ -22,7 +22,7 @@ body {
   top: 5%;
   left: 50%;
   transform: translate(-50%, 0);
-  width: 70vw;
+  width: 80vw;
 }
 #signIn {
   display: flex;
@@ -37,6 +37,9 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 5px;
+}
+#marker-inspector > p {
+  text-align: center;
 }
 
 .button {
@@ -99,6 +102,28 @@ img {
   display: block;
 }
 
+#tooltip {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+}
+#tooltip.hide {
+  display: none;
+}
+#characterName {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: rgb(65, 65, 65);
+  text-align: center;
+}
+#description {
+  margin: 2px;
+  font-size: 1rem;
+  color: rgb(65, 65, 65);
+  text-align: center;
+}
+
 #progress {
   display: flex;
   flex-direction: column;
@@ -157,10 +182,55 @@ img {
  
 #motivation {
   margin: 5px;
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: rgb(65, 65, 65);
 }
 
+#Animation {
+  bottom: 45%;
+  left: 50%;
+  transform: translate(-50%, 0) scale(0);
+  min-width: 15rem;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+
+}
+@keyframes grow {
+  0% {transform: scale(0) rotate(180deg) translate(-50%, 0)}
+  20% {transform: scale(1) rotate(0deg) translate(-50%, 0)}
+  100% {transform: scale(1) rotate(0deg) translate(-50%, 0)}
+}
+#Animation.hide {
+  display: none;
+}
+#Animation.grow {
+  animation: grow 7s ease-in-out;
+}
+
+.popup#Animation {
+  background-color: rgba(0, 0, 0, 0);
+  border-color: rgba(0, 0,0, 0);
+}
+
+#Animation #character {
+  text-align: center;
+  font-size: 3rem;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+
+}#Animation #points {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
 
 
 .rainbow { 

@@ -1,0 +1,382 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 7096,
+      "max": [
+        1.4338990449905396,
+        0.49171799421310425,
+        2.2324419021606445
+      ],
+      "min": [
+        -1.4338990449905396,
+        -0.46172600984573364,
+        -0.01216300018131733
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 85152,
+      "componentType": 5126,
+      "count": 7096,
+      "max": [
+        0.9999971985816956,
+        0.9999943971633911,
+        1.0
+      ],
+      "min": [
+        -0.9999972581863403,
+        -1.0,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 7096,
+      "max": [
+        0.9902340173721313,
+        0.9965819716453552
+      ],
+      "min": [
+        0.0029770000837743282,
+        0.0039059999398887157
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 25665,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 170304,
+      "componentType": 5126,
+      "count": 294,
+      "max": [
+        0.07475800067186356,
+        -0.17403000593185425,
+        1.8973480463027954
+      ],
+      "min": [
+        -0.07475800067186356,
+        -0.228084996342659,
+        1.79728102684021
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 173832,
+      "componentType": 5126,
+      "count": 294,
+      "max": [
+        0.9224794507026672,
+        0.0034628857392817736,
+        1.0
+      ],
+      "min": [
+        -0.9224794507026672,
+        -0.9931320548057556,
+        -1.0
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 56768,
+      "componentType": 5126,
+      "count": 294,
+      "max": [
+        0.6557620167732239,
+        0.5605469942092896
+      ],
+      "min": [
+        0.4753420054912567,
+        0.3681640028953552
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 102660,
+      "componentType": 5125,
+      "count": 1026,
+      "type": "SCALAR"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 177360,
+      "componentType": 5126,
+      "count": 50,
+      "max": [
+        0.0675560012459755,
+        -0.20867200195789337,
+        1.8754940032958984
+      ],
+      "min": [
+        -0.0675560012459755,
+        -0.2214059978723526,
+        1.8280479907989502
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 177960,
+      "componentType": 5126,
+      "count": 50,
+      "max": [
+        0.5866501927375793,
+        -0.7961031794548035,
+        0.3688918948173523
+      ],
+      "min": [
+        -0.567337155342102,
+        -0.9919503927230835,
+        -0.3663772940635681
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 59120,
+      "componentType": 5126,
+      "count": 50,
+      "max": [
+        -0.0694580003619194,
+        0.8803709745407104
+      ],
+      "min": [
+        -0.9536129832267761,
+        0.16992199420928955
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "byteOffset": 106764,
+      "componentType": 5125,
+      "count": 192,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Neut2000 (https://sketchfab.com/Neut2000)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/disney-infinity-wreck-it-ralph-e01eb66984dc4d75a38ab15a208c581d",
+      "title": "Disney Infinity Wreck- It Ralph"
+    },
+    "generator": "Sketchfab-12.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 107532,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 59520,
+      "byteOffset": 107532,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 178560,
+      "byteOffset": 167052,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 345612,
+      "uri": "scene.bin"
+    }
+  ],
+  "images": [
+    {
+      "uri": "textures/W.I.R_Ralph_Body_baseColor.png"
+    },
+    {
+      "uri": "textures/W.I.R_Ralph_Body_emissive.png"
+    },
+    {
+      "uri": "textures/W.I.R_Ralph_Eyes_baseColor.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "emissiveTexture": {
+        "index": 1
+      },
+      "name": "W.I.R_Ralph_Body",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8451479492658763
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "W.I.R_Ralph_Eye_Lids",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8451479492658763
+      }
+    },
+    {
+      "doubleSided": true,
+      "name": "W.I.R_Ralph_Eyes",
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 2
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.8451479492658763
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TEXCOORD_0": 2
+          },
+          "indices": 3,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_1",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 5,
+            "POSITION": 4,
+            "TEXCOORD_0": 6
+          },
+          "indices": 7,
+          "material": 1,
+          "mode": 4
+        }
+      ]
+    },
+    {
+      "name": "Object_2",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 9,
+            "POSITION": 8,
+            "TEXCOORD_0": 10
+          },
+          "indices": 11,
+          "material": 2,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        -1.0,
+        0.0,
+        0.0,
+        1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2,
+        3,
+        4
+      ],
+      "name": "ralph.obj.cleaner.materialmerger.gles"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_2"
+    },
+    {
+      "mesh": 1,
+      "name": "Object_3"
+    },
+    {
+      "mesh": 2,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    },
+    {
+      "sampler": 0,
+      "source": 2
+    }
+  ]
+}
