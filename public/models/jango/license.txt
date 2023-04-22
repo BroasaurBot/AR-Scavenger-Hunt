@@ -1,0 +1,11 @@
+Model Information:
+* title:	Jango Fett Disney Infinity
+* source:	https://sketchfab.com/3d-models/jango-fett-disney-infinity-9bd2348a62214e6ab7b586c938a52240
+* author:	KevBot (https://sketchfab.com/boyle.kj)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Jango Fett Disney Infinity" (https://sketchfab.com/3d-models/jango-fett-disney-infinity-9bd2348a62214e6ab7b586c938a52240) by KevBot (https://sketchfab.com/boyle.kj) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

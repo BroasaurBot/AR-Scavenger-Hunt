@@ -1,0 +1,11 @@
+Model Information:
+* title:	Disney Buzz
+* source:	https://sketchfab.com/3d-models/disney-buzz-8208ec4c0f204a0f96f41fb4154264ce
+* author:	judasben29 (https://sketchfab.com/judasben29)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Disney Buzz" (https://sketchfab.com/3d-models/disney-buzz-8208ec4c0f204a0f96f41fb4154264ce) by judasben29 (https://sketchfab.com/judasben29) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
