@@ -61,11 +61,11 @@
         },
         {
         name: 'Mickey Mouse',
-        description: 'To Do'
+        description: 'This old building reminds Mickey of himself! What better place to learn about wealth? Those clubhouse bills won’t pay themselves.'
         },
         {
         name: 'Mike Wazowski',
-        description: 'To DO'
+        description: 'According to Mike, the scariest thing he’s ever seen is the maths left on the blackboards in these tutorial rooms.'
         },
         {
         name: 'Mr. Incredible',
@@ -77,7 +77,7 @@
         },
         {
         name: 'Ralph',
-        description: 'TO DO'
+        description: 'He can dig a tunnel faster than any drill, and who better to carry all that steel? Ralph’s a natural!'
         },
         {
         name: 'Remy',
@@ -93,7 +93,7 @@
     },
     {
         name: 'Star-Lord',
-        description: 'TO DO'
+        description: 'After Star-Lords recent battle, his rocket boots took a major hit. After repairs, he thought to test the propulsion by jumping from Fisher Library Roof (Not to be attempted). Wish him the best, or we may not get another Guardian of the Galaxy movie.'
     },
     {
         name: 'Sulley',
@@ -105,7 +105,7 @@
     },
     {
         name: 'Vanellope',
-        description: 'TO DO'
+        description: 'Vanellope had gotten used to fixing all the things that Ralph would break. So use to it that she decided architecture might just be her forte. Luckily for her architecture was an incredibly easy subject at USYD, so she had extra time to continue racing.'
     },
     {
         name: 'Winnie',

@@ -18,294 +18,303 @@
  
 
   <body style="margin: 0px; overflow: hidden;">
-    <div id="root"></div>
 
     <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;' vr-mode-ui="enabled: false">
 
-    <a-marker markerhandler type="barcode" value="0" smooth="true">
-        <a-entity
-            scale="4 4 4"
-            rotation="0 0 0"
-            position="0 2 -1"
-            animation="property: rotation; to: 0 0 360; loop: true; dur: 9000"
-            gltf-model="/models/gdsc/scene.gltf"
-        ></a-entity>
-    </a-marker>
-    
-    <a-marker markerhandler type="barcode" value="1" smooth="true">
-        <a-entity
-            scale="0.04 0.04 0.04"
-            position="0 0 2"
-            rotation="-90 0 0"
-            gltf-model="/models/bullseye/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="0" smooth="true">
+            <a-entity
+                scale="4 4 4"
+                rotation="0 0 0"
+                position="0 2 -1"
+                animation="property: rotation; to: 0 0 360; loop: true; dur: 9000"
+                gltf-model="/models/gdsc/scene.gltf"
+            ></a-entity>
+        </a-marker>
+        
+        <a-marker markerhandler type="barcode" value="1" smooth="true">
+            <a-entity
+                scale="0.05 0.05 0.05"
+                position="0 2 8"
+                rotation="-90 0 0"
+                gltf-model="/models/bullseye/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="2" smooth="true">
-        <a-entity
-            scale="0.15 0.15 0.15"
-            rotation="-90 0 0"
-            gltf-model="/models/buzz/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="2" smooth="true">
+            <a-entity
+                scale="0.18 0.18 0.18"
+                position="0 2 6"
+                rotation="-90 0 0"
+                gltf-model="/models/buzz/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="3" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            position="0 0 2"
-            gltf-model="/models/captain_jack_sparrow/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="3" smooth="true">
+            <a-entity
+                scale="0.05 0.05 0.05"
+                rotation="-90 0 0"
+                position="0 2 8"
+                gltf-model="/models/captain_jack_sparrow/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="4" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            position="0 2 2"
-            gltf-model="/models/doofenshmirtz/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="4" smooth="true">
+            <a-entity
+                scale="0.05 0.05 0.05"
+                rotation="-90 0 0"
+                position="0 2 8"
+                gltf-model="/models/doofenshmirtz/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="5" smooth="true">
-        <a-entity
-            scale="0.02 0.02 0.02"
-            rotation="-80 0 0"
-            position="0 3 0"
-            gltf-model="/models/francesco_bernoulli/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="5" smooth="true">
+            <a-entity
+                scale="0.025 0.025 0.025"
+                rotation="-80 0 0"
+                position="0 3 3"
+                gltf-model="/models/francesco_bernoulli/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="6" smooth="true">
-        <a-entity
-            scale="0.04 0.04 0.04"
-            rotation="-90 0 0"
-            position="0 1 2"
-            gltf-model="/models/gibbs/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="6" smooth="true">
+            <a-entity
+                scale="0.05 0.05 0.05"
+                rotation="-90 0 0"
+                position="0 2 8"
+                gltf-model="/models/gibbs/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="7" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            gltf-model="/models/hamm/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="7" smooth="true">
+            <a-entity
+                scale="0.035 0.035 0.035"
+                rotation="-80 0 0"
+                position="0 2 3"
+                gltf-model="/models/hamm/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="8" smooth="true">
-        <a-entity
-            scale="3 3 3"
-            rotation="-90 0 0"
-            position="0 0 2"
-            gltf-model="/models/iron_man/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="8" smooth="true">
+            <a-entity
+                scale="4.5 4.5 4.5"
+                rotation="-90 0 0"
+                position="0 2 8"
+                gltf-model="/models/iron_man/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="9" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            position="0 2 2"
-            gltf-model="/models/jango/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="9" smooth="true">
+            <a-entity
+                scale="0.05 0.05 0.05"
+                rotation="-90 0 0"
+                position="0 2 7"
+                gltf-model="/models/jango/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="10" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            position="0 0 2"
-            gltf-model="/models/jessie/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="10" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                rotation="-90 0 0"
+                position="0 2 8"
+                gltf-model="/models/jessie/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="11" smooth="true">
-        <a-entity
-            scale="0.6 0.6 0.6"
-            rotation="-90 0 0"
-            position="0 0 3"
-            gltf-model="/models/kevin/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="11" smooth="true">
+            <a-entity
+                scale="0.6 0.6 0.6"
+                rotation="-80 0 0"
+                position="0 2 6"
+                gltf-model="/models/kevin/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="12" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-45 0 0"
-            position="0 2 0"
-            gltf-model="/models/lightning_mc_queen/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="12" smooth="true">
+            <a-entity
+                scale="0.035 0.035 0.035"
+                rotation="-45 0 0"
+                position="0 2 2"
+                gltf-model="/models/lightning_mc_queen/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="13" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-45 0 0"
-            position="0 2 0"
-            gltf-model="/models/luigi/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="13" smooth="true">
+            <a-entity
+                scale="0.04 0.04 0.04"
+                rotation="-45 0 0"
+                position="0 2 2"
+                gltf-model="/models/luigi/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="14" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-45 0 0"
-            position="0 2 0"
-            gltf-model="/models/mater/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="14" smooth="true">
+            <a-entity
+                scale="0.035 0.035 0.035"
+                rotation="-45 0 0"
+                position="0 2 2"
+                gltf-model="/models/mater/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="15" smooth="true">
-        <a-entity
-            scale="1.3 1.3 1.3"
-            position="0 0 2"
-            rotation="-80 0 0"
-            gltf-model="/models/mickey_mouse/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="15" smooth="true">
+            <a-entity
+                scale="1.2 1.2 1.2"
+                position="0 2 6"
+                rotation="-80 0 0"
+                gltf-model="/models/mickey_mouse/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="16" smooth="true">
-        <a-entity
-            scale="4 4 4"
-            rotation="-90 0 0"
-            gltf-model="/models/mike_wazowski/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="16" smooth="true">
+            <a-entity
+                scale="5.5 5.5 5.5"
+                rotation="-90 0 0"
+                position="0 2 5"
+                gltf-model="/models/mike_wazowski/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="17" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            position="0 2 2"
-            rotation="-90 0 0"
-            gltf-model="/models/mr_incredible/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="17" smooth="true">
+            <a-entity
+               scale="0.045 0.045 0.045"
+                position="0 2 8"
+                rotation="-90 0 0"
+                gltf-model="/models/mr_incredible/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="18" smooth="true">
-        <a-entity
-            scale="0.5 0.5 0.5"
-            rotation="-90 0 0"
-            position="0 2 2"
-            gltf-model="/models/puss_in_boots/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="18" smooth="true">
+            <a-entity
+                scale="0.6 0.6 0.6"
+                rotation="-90 0 0"
+                position="0 2 7"
+                gltf-model="/models/puss_in_boots/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="19" smooth="true">
-        <a-entity
-            scale="3 3 3"
-            position="0 2 2"
-            rotation="-90 0 0"
-            gltf-model="/models/ralph/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="19" smooth="true">
+            <a-entity
+                scale="3.5 3.5 3.5"
+                position="0 2 6"
+                rotation="-90 0 0"
+                gltf-model="/models/ralph/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="20" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            position="0 2 2"
-            gltf-model="/models/remy/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="20" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                rotation="-90 0 0"
+                position="0 2 6"
+                gltf-model="/models/remy/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="21" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            position="0 2 2"
-            rotation="-90 0 0"
-            gltf-model="/models/rex/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="21" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                position="0 2 8"
+                rotation="-90 0 0"
+                gltf-model="/models/rex/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
-    <a-marker markerhandler type="barcode" value="22" smooth="true">
-        <a-entity
-            scale="0.04 0.04 0.04"
-            rotation="-90 0 0"
-            gltf-model="/models/scar/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="22" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                rotation="-80 0 0"
+                position="0 0 6"
+                gltf-model="/models/scar/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
-    <a-marker markerhandler type="barcode" value="23" smooth="true">
-        <a-entity
-            scale="3 3 3"
-            position="0 2 2"
-            rotation="-90 0 0"
-            gltf-model="/models/star-lord/scene.gltf"
-        ></a-entity>
-    </a-marker>
-
-
-    <a-marker markerhandler type="barcode" value="24" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            gltf-model="/models/sulley/scene.gltf"
-            position="0 2 2"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="23" smooth="true">
+            <a-entity
+                scale="4 4 4"
+                position="0 2 8"
+                rotation="-90 0 0"
+                gltf-model="/models/star-lord/scene.gltf"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="25" smooth="true">
-        <a-entity
-            scale="0.03 0.03 0.03"
-            rotation="-90 0 0"
-            gltf-model="/models/syndrome/scene.gltf"
-            position="0 2 2"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="24" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                rotation="-90 0 0"
+                gltf-model="/models/sulley/scene.gltf"
+                position="0 2 8"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="26" smooth="true">
-        <a-entity
-            scale="4 4 4"
-            rotation="-90 0 0"
-            gltf-model="/models/vanellope/scene.gltf"
-            position="0 0 0"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="25" smooth="true">
+            <a-entity
+                scale="0.045 0.045 0.045"
+                rotation="-90 0 0"
+                gltf-model="/models/syndrome/scene.gltf"
+                position="0 2 8"
+            ></a-entity>
+        </a-marker>
 
 
-    <a-marker markerhandler type="barcode" value="27" smooth="true">
-        <a-entity
-            scale="1 1 1"
-            rotation="-75 0 0"
-            gltf-model="/models/winnie/scene.gltf"
-        ></a-entity>
-    </a-marker>
+        <a-marker markerhandler type="barcode" value="26" smooth="true">
+            <a-entity
+                scale="5 5 5"
+                rotation="-90 0 0"
+                gltf-model="/models/vanellope/scene.gltf"
+                position="0 2 4"
+            ></a-entity>
+        </a-marker>
 
-    <a-marker markerhandler type="barcode" value="28" smooth="true">
-        <a-entity
-            scale="6 6 6"
-            rotation="-90 0 0"
-            position="0 2 2"
-            gltf-model="/models/bugs_bunny/scene.gltf"
-        ></a-entity>
-    </a-marker>
+
+        <a-marker markerhandler type="barcode" value="27" smooth="true">
+            <a-entity
+                scale="1.2 1.2 1.2"
+                rotation="-75 0 0"
+                position="0 0 4"
+                gltf-model="/models/winnie/scene.gltf"
+            ></a-entity>
+        </a-marker>
+
+        <a-marker markerhandler type="barcode" value="28" smooth="true">
+            <a-entity
+                scale="7 7 7"
+                rotation="-90 0 0"
+                position="0 2 6"
+                gltf-model="/models/bugs_bunny/scene.gltf"
+            ></a-entity>
+        </a-marker>
         
         <a-entity camera></a-entity>
     </a-scene>
 
+    <div class="popup" id="logo">
+        GDSC    
+        <img src="./icons/gdsc.png" alt="GDSC">
+        USYD
+    </div>
 
   <div class="popup" id="topbar">
     <div id="signIn" class="hide">
@@ -314,6 +323,7 @@
         <img src="./icons/login.png" alt="Sign In">
       </button>
     </div>
+
 
     <div id="tooltip" class="hide">
       <h2 id="characterName"></h2>
@@ -336,6 +346,12 @@
         </div>
         <div id="motivation"></div>
       </div>
+    </div>
+
+    <div id="rules">
+        <a href="https://dash.gdscusyd.org/" target="_blank">Learn more</a>
+        <a href="https://dash.gdscusyd.org/rules" target="_blank">Rules</a>
+        <a href="https://dash.gdscusyd.org/clues" target="_blank">Clues</a>
     </div>
   </div> 
 

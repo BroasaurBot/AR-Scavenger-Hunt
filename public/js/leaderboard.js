@@ -1,8 +1,8 @@
 import {auth, app, db, provider} from './firebase.js';
 import { updateDoc, getDoc, doc, deleteDoc, collection, getDocs, setDoc} from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
 
-const start = 1681084801000;
-//const officialStart = 1681689601000;
+//const start = 1681084801000;
+const officialStart = 1681689601000;
 const numberOfPositions = 20;
 const minPoints = 500;
 
@@ -15,7 +15,7 @@ function calculateScore(time) {
 
 function getTimeSinceStart() {
     const now = new Date();
-    return (now.getTime() - start) / (1000*60*60*24);
+    return (now.getTime() - officialStart) / (1000*60*60*24);
 }
 
 function calculateCurrentScore() {

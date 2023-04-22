@@ -58,7 +58,7 @@ function renderProgress() {
     const p = document.getElementById("points");
     p.innerHTML = points.toString() + "pts";
     const prize = document.getElementById("prize");
-    prize.innerHTML = info.pos + ": " + info.tier ;
+    prize.innerHTML = (info.pos < 0 ? "" : info.pos + ": ") + info.tier ;
 
     const motivation = document.getElementById("motivation");
     let nextTier = "";
@@ -77,5 +77,6 @@ function toggleTopBar() {
     renderTopBar(topVisible)
 }
 document.getElementById("information").addEventListener("click", toggleTopBar)
+document.getElementById("logo").addEventListener("click", toggleTopBar)
 
 export {renderTooltip, renderTopBar, renderProgress}
