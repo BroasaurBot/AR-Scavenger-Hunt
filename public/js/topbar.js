@@ -27,9 +27,6 @@ function renderProgress() {
 
     const p = document.getElementById("points");
     p.innerHTML = points.toString() + "pts";
-
-
-
 }
 
 function renderSignIn() {

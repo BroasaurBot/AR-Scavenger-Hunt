@@ -1,7 +1,7 @@
 import { onAuthStateChanged, signInWithRedirect, signInWithPopup } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import {auth, app, db, provider} from './firebase.js';
 import { updateDoc, arrayUnion, getDoc, doc, onSnapshot, setDoc, increment } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-firestore.js"
-import { activeMarker, callHasCollected } from './markerEvents.js';
+import { activeMarker, renderInspector } from './markerEvents.js';
 import { renderTooltip, renderProgress, renderSignIn } from "./topbar.js";
 import { calculateCurrentScore, getTimeSinceStart} from "./leaderboard.js";
 
@@ -22,7 +22,6 @@ await onAuthStateChanged(auth, (user) => {
                 points = data.points;
                 console.log("Collected: ", collectedMarkers);
 
-                //callHasCollected();
                 renderProgress();
             }
         });
@@ -68,9 +67,13 @@ const collectMarker = async () => {
             points: increment(calculateCurrentScore())
         })
         console.log("Collected Marker")
+        renderInspector(true, activeMarker);
+    } else {
+        console.log("Already collected marker")
+        renderTooltip(markerInfo[activeMarker].description, markerInfo[activeMarker].name);
     }
 }
-//document.querySelector('#interact').addEventListener('click', collectMarker);
+document.querySelector('#interact').addEventListener('click', collectMarker);
 
 const signIn = () => {
     signInWithPopup(auth, provider);
