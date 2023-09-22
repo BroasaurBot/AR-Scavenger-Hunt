@@ -1,5 +1,5 @@
-import { collectedMarkers } from "./progress.js";
-import { renderTooltip } from "./topbar.js";
+import { auth } from "./firebase.js";
+import { collectedMarkers, loggedInUser } from "./progress.js";
 
 AFRAME.registerComponent('markerhandler', {
     init: function () {
@@ -34,6 +34,8 @@ AFRAME.registerComponent('markerhandler', {
 
   function renderInspector(show, id) {
     let button = document.getElementById('interact');
+    if (loggedInUser == null) 
+      return;
     if (show == true) {
         button.classList.remove("hide");
 

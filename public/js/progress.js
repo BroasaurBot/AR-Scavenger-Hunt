@@ -5,6 +5,7 @@ import { activeMarker, renderInspector } from './markerEvents.js';
 import { renderTooltip, renderProgress, renderSignIn } from "./topbar.js";
 import { calculateCurrentScore, getTimeSinceStart} from "./leaderboard.js";
 
+let loggedInUser = null;
 let collectedMarkers = [];
 let points = 0;
 
@@ -12,6 +13,7 @@ await onAuthStateChanged(auth, (user) => {
 
     if (user) {
         console.log("Logged in " + user.displayName);
+        loggedInUser = user;
         setupDocument(user);
         renderProgress();
 
@@ -80,4 +82,4 @@ const signIn = () => {
 }
 document.querySelector('#signIn button').addEventListener('click', signIn);
 
-export { collectedMarkers, points }
+export { collectedMarkers, points, loggedInUser}

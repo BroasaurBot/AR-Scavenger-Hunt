@@ -3,13 +3,17 @@ import {auth} from "./firebase.js";
 
 function renderTooltip(msg, name="") {
     let middle = document.querySelector('#middle');
-    if (msg == "") {
-        middle.classList.add("hide")
-    } else {
-        middle.classList.remove("hide");
-        middle.querySelector("#characterName").innerHTML = name;
-        middle.querySelector("#description").innerHTML = msg;
-    }
+    middle.classList.remove("hide");
+    middle.querySelector("#characterName").innerHTML = name;
+    middle.querySelector("#description").innerHTML = msg;
+}
+document.querySelector('#close').addEventListener('click', hideTooltip);
+document.querySelector('#close img').ondragstart = () => {return false};
+
+function hideTooltip() {
+    console.log("Hiding tooltip");
+    let middle = document.querySelector('#middle');
+    middle.classList.add("hide");
 }
 
 function renderProgress() {
@@ -20,7 +24,7 @@ function renderProgress() {
     const progressBarFill = document.getElementById("progressBarFill");
     const dot = document.getElementById("dot");
     progressBarFill.style.width =  + percent.toString() + "%";
-    dot.style.setProperty("margin-left", 'calc(' + percent.toString() + '% - 20px)');
+    dot.style.setProperty("margin-left", 'calc(' + percent.toString() + '% - 10px)');
 
     const count = document.getElementById("count");
     count.innerHTML = collectedMarkers.length.toString() + "/" + markerInfo.length.toString();
@@ -35,4 +39,4 @@ function renderSignIn() {
     return;
 }
 
-export {renderTooltip, renderProgress, renderSignIn}
+export {renderTooltip, hideTooltip, renderProgress, renderSignIn}

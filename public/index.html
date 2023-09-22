@@ -40,22 +40,16 @@
     </div>
     </div>
 
-
-    <!--
-      <a href="https://dash.gdscusyd.org/" target="_blank">Learn more</a>
-      <a href="https://dash.gdscusyd.org/rules" target="_blank">Rules</a>
-      <a href="https://dash.gdscusyd.org/clues" target="_blank">Clues</a>
-    -->
   </div> 
 
   <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;' vr-mode-ui="enabled: false">
       <div id="marker_root"></div>
   </a-scene>
 
-  <div id="middle" class="popup">
-    <div id="characterName"></div>
-    <div id="description"></div>
-
+  <div id="middle" class="popup hide">
+      <h1 id="characterName"></h1>
+      <p id="description"></p>
+    <button id="close" ondragstart="false"><img src="./icons/close.png"></button>
   </div>
 
   <div id="bottom" class="popup">
