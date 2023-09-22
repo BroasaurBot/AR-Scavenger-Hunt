@@ -12,86 +12,55 @@
   <script src="./js/info.js"></script>
   <script src="./js/firebase.js" type="module"></script>
   <script src="./js/markerEvents.js" type="module"></script>
-  <!--
   <script src="./js/progress.js" type="module"></script>
   <script src="./js/topbar.js" type="module"></script>
-  -->
 
 
   <body style="margin: 0px; overflow: hidden;">
 
-    <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;' vr-mode-ui="enabled: false">
-        <div id="marker_root"></div>
-    </a-scene>
 
-    <!--    
-    <div class="popup" id="logo">
-        GDSC    
-        <img src="./icons/gdsc.png" alt="GDSC">
-        USYD
-    </div>
-
-  <div class="popup" id="topbar">
-    <div id="signIn" class="hide">
-      <p style="text-align: center;">Please <span style="font-weight:bold">sign in</span> to track progress</p>
-      <button class="button">
-        <img src="./icons/login.png" alt="Sign In">
-      </button>
-    </div>
-
-
-    <div id="tooltip" class="hide">
-      <h2 id="characterName"></h2>
-      <div id="description"></div>
-    </div>
-
-    <div id="progress" class="hide">
-      <div id="collected">
-        <h4>Markers Collected: </h4>
-        <div id="progressBar">
-          <div id="progressBarFill"></div>
-        </div>
-        <p id="count"></p>
+  <div id="top" class="popup">
+    <div class="black-round green-back padded">
+      <div id="signIn" class="hide">
+        <div>In order to track <span class="yellow-text bold">progress</span></div>
+        <button>Sign In <img class="logo" src="./icons/google.png"></button>
       </div>
 
-      <div id="pointsInfo">
-        <div id="pointsprize">
-          <div id="points"></div>
-          <div id="prize"></div>
+      <div id="progress" class="hide">
+        <div id="header">
+          <h2>Progress</h2>
+          <p>Points: <span class="yellow-text bold" id="points"></span></p>
+          <p>Collected <span class="yellow-text bold" id="count"></span></p>
         </div>
-        <div id="motivation"></div>
+          <div id="progressBar">
+            <div id="progressBarFill"></div>
+            <div id="dot"></div>
+          </div>
       </div>
     </div>
-
-    <div id="rules">
-        <a href="https://dash.gdscusyd.org/" target="_blank">Learn more</a>
-        <a href="https://dash.gdscusyd.org/rules" target="_blank">Rules</a>
-        <a href="https://dash.gdscusyd.org/clues" target="_blank">Clues</a>
     </div>
+
+
+    <!--
+      <a href="https://dash.gdscusyd.org/" target="_blank">Learn more</a>
+      <a href="https://dash.gdscusyd.org/rules" target="_blank">Rules</a>
+      <a href="https://dash.gdscusyd.org/clues" target="_blank">Clues</a>
+    -->
   </div> 
 
-  <div class="popup hide" id="Animation">
-    <div id="character" class="rainbow"></div>
-    <div id="points" class="rainbow"></div>
+  <a-scene embedded arjs='sourceType: webcam; debugUIEnabled: false; detectionMode: mono_and_matrix; matrixCodeType: 3x3_PARITY65;' vr-mode-ui="enabled: false">
+      <div id="marker_root"></div>
+  </a-scene>
+
+  <div id="middle" class="popup">
+    <div id="characterName"></div>
+    <div id="description"></div>
+
   </div>
 
-  <div class="popup hide" id="bottombar">
-    <div id="marker-inspector">
-      <button id="interact" class="">
-        <img src="./icons/library_add.png" alt="add">
-      </button>
-      <p>
-        Go search for a marker
-      </p>
-      <button id="information" class="">
-        <img src="./icons/info.png" id='info' alt="info">
-        <img src="./icons/close.png" id='close' class="hide" alt="info">
-      </button>
-    </div>
+  <div id="bottom" class="popup">
+    
   </div>
-
-    -->
-
 
   </body>
    <script>

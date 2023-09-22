@@ -12,26 +12,13 @@ body {
   position: fixed;
   display: inline;
   z-index: 10;
-  background-color: rgb(242, 248, 248);
-  border-radius: 15px;
-  border: 3px solid rgb(98, 98, 98);
-  padding: 5px;
 }
 
-#topbar {
-  top: 50px;
+#top {
+  top: 20px;
   left: 50%;
   transform: translate(-50%, 0);
   width: 80vw;
-}
-#rules {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-
-  font-size: 1.5rem;
-  margin: 5px 0 5px 0;
 }
 #signIn {
   display: flex;
@@ -39,17 +26,77 @@ body {
   align-items: center;
   justify-content: center;
   gap: 20px;
-  margin: 0 auto 0 auto;
+
+  color: #FFFFFF;
 }
-#marker-inspector {
+
+.logo {
+  height: 30px;
+  width: 30px;
+  object-fit: contain;
+}
+
+#signIn button {
+  border: 0px;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 10px 5px 10px;
+}
+
+#progress {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+
+  position: relative;
+  
+}
+
+#progressBar {
+  width: 100%;
+  height: 20px;
+  background-color: #10702B;
+  border-radius: 15px;
+  border: 1px solid rgb(0, 0, 0);
+  overflow: hidden;
+  position: static;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#progressBarFill {
+  height: 100%;
+  background-color: #FFFFFF;
+  width: 0%;
+}
+
+#dot {
+  width: 20px;
+  height: 20px;
+  background-color: #FBBC05;
+  border-radius: 50%;
+  border: 1px solid rgb(0, 0, 0);
+  transform: scale(1.5);
+
+  position: absolute;
+}
+
+#header {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  gap: 5px;
-}
-#marker-inspector > p {
-  text-align: center;
+  padding: 0 20px 0 20px;
+  width: 80%;
+  margin: -10px auto -10px auto;
+  font-size: 1rem;
+  color: white;
 }
 
 .button {
@@ -60,86 +107,7 @@ img {
   height: 100%;
 }
 
-#logo {
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 0);
 
-  width: 80px;
-
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-
-  font-size: 1rem;
-  font-weight: bold;
-  color: rgb(61, 223, 255);
-}
-.popup#logo {
-  background-color: transparent;
-  border: none;
-}
-
-#logo img {
-  object-fit: contain;
-  width: 100%;
-}
-
-#rules {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-
-  gap: 20px;
-
-  margin: 10px;
-}
-
-#bottombar {
-  bottom: 5%;
-  left: 50%;
-  transform: translate(-50%, 0);
-  min-width: 15rem;
-}
-
-#interact { 
-  background-color: grey;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgb(44, 58, 136);
-  transform: translate(-50%, 0) scale(1.8);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-}
-#information { 
-  background-color: grey;
-  border-radius: 50%;
-  overflow: hidden;
-  border: 2px solid rgb(255, 247, 0);
-  transform: translate(50%, 0) scale(1.8);
-  width: 50px;
-  height: 50px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: visible;
-}
-
-#interact img {
-  height: 80%;
-  width: 80%;
-}
-#information img {
-  height: 80%;
-  width: 80%;
-}
 
 .hide {
   display: none;
@@ -147,8 +115,8 @@ img {
 #signIn.hide {
   display: none;
 }
-.show {
-  display: block;
+#progress.hide {
+  display: none;
 }
 
 #tooltip {
@@ -173,112 +141,27 @@ img {
   text-align: center;
 }
 
-#progress {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
 
-#progress.hide {
-  display: none;
-}
 
-#collected {
-  display: flex;
-  flex-direction: row;
-  justify-items: center;
-  align-items: center;
-  gap: 5px;
-  width: 80%;
-}
-
-#progressBar {
-  width: 100%;
-  height: 20px;
-  background-color: rgb(255, 255, 255);
+.black-round {
   border-radius: 10px;
-  border: 1px solid rgb(0, 0, 0);
-  overflow: hidden;
+  border: #000000 1px solid;
 }
 
-#progressBarFill {
-  height: 100%;
-  background-color: rgb(0, 185, 25);
-  width: 0%;
+.green-back {
+  background-color: #148D36;
 }
 
-#pointsInfo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
+.yellow-text {
+  color: #FBBC05;
 }
 
-#pointsprize {
-  display: flex;
-  flex-direction: row;
-  align-items: top;
-  justify-content: space-around;
-  width: 100%;
-  gap: 20px;
-
-  font-size: 1.5rem;
+.bold {
   font-weight: bold;
-  color: rgb(65, 65, 65);
-  text-align: center;
-}
- 
-#motivation {
-  margin: 5px;
-  font-size: 1rem;
-  color: rgb(65, 65, 65);
 }
 
-#Animation {
-  bottom: 45%;
-  left: 50%;
-  transform: translate(-50%, 0) scale(0);
-  min-width: 15rem;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-
-}
-@keyframes grow {
-  0% {transform: scale(0) rotate(180deg) translate(-50%, 0)}
-  20% {transform: scale(1) rotate(0deg) translate(-50%, 0)}
-  100% {transform: scale(1) rotate(0deg) translate(-50%, 0)}
-}
-#Animation.hide {
-  display: none;
-}
-#Animation.grow {
-  animation: grow 7s ease-in-out;
-}
-
-.popup#Animation {
-  background-color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0,0, 0);
-}
-
-#Animation #character {
-  text-align: center;
-  font-size: 3rem;
-  font-weight: bold;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-
-}#Animation #points {
-  text-align: center;
-  font-size: 2.5rem;
-  font-weight: bold;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+.padded {
+  padding: 15px;
 }
 
 

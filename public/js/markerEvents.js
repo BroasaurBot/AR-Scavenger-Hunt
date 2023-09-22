@@ -39,7 +39,6 @@ AFRAME.registerComponent('markerhandler', {
         hasCollected(activeMarker, collectedMarkers);
     }else {
         collect.innerHTML = "Go search for a marker";
-        button.classList.remove("rainbow");
         renderTooltip("")
     }
   }
@@ -47,16 +46,12 @@ AFRAME.registerComponent('markerhandler', {
 //Changes the rendering of popup
 function hasCollected(id, collectedMarkers) {
     let collect = document.querySelector('#marker-inspector > p')
-    const button = document.querySelector('#interact');
 
     if (activeMarker == id && id != -1) {
       if (collectedMarkers.includes("Marker"+String(id))) {
           collect.innerHTML = markerInfo[id].name + "!";
-          button.classList.remove("rainbow");
           renderTooltip(markerInfo[id].description, markerInfo[id].name)
       } else {
-          collect.innerHTML = "<-- Click here to collect " + markerInfo[id].name;
-          button.classList.add("rainbow");
           renderTooltip("");
       }
     }
