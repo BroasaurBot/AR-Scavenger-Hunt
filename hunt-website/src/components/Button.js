@@ -22,7 +22,7 @@ function Button({ children, size, back_color, onClick, redirect, color}) {
     }
 
     return (
-        <div class="button">
+        <div className="button">
             <button id="button"
                 style={{
                     paddingLeft: size + 10, paddingRight: size + 10, paddingTop: size - 5, paddingBottom: size - 5,

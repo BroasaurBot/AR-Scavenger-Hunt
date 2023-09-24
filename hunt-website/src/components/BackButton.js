@@ -8,7 +8,7 @@ function BackButton({home}) {
   const onClick = home ? (() => navigate("/")) : (() => navigate(-1));
   return (
     <div id="backbutton">
-        <button class="back-button" onClick={onClick}>
+        <button className="back-button" onClick={onClick}>
             <img src="/images/arrow_back.png" alt="back"></img> 
         </button>
     </div>

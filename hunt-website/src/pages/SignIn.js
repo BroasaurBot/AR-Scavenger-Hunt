@@ -35,13 +35,13 @@ function SignIn() {
     });
 
   return (
-    <div class="column mobile-width">
+    <div className="column mobile-width">
         <BackButton home></BackButton>
         <GDSC_logo> </GDSC_logo>
-        <div class="title">
+        <div className="title">
             Join the Hunt!
         </div>
-        <p class="text-md mb-md">
+        <p className="text-md mb-md">
             Sign in with your Google account to start hunting!
         </p>
         <Button size={25} back_color="#4285F4" onClick={signIn}>Sign In</Button>
