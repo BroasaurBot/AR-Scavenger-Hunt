@@ -1,0 +1,75 @@
+.shadow_box {
+    border: #000000 1px solid;
+    border-radius: 10px;
+    box-shadow: 5px 5px 1px #000000;
+}
+
+#info {
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
+    position: relative;
+}
+
+#leaderboard {
+    max-width: 500px;
+    width: 100%;
+}
+
+#board-title {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: bold;
+}
+
+#board-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 20px;
+    
+    max-height: 500px;
+    overflow: scroll;
+    overflow-x: hidden;
+    padding: 5px 20px;
+}
+
+#board-list::-webkit-scrollbar {
+    width: 15px;
+}
+
+#board-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 15px;
+    border: #d4d4d4 1px solid;
+    padding: 2px;
+}
+
+#board-list::-webkit-scrollbar-thumb {
+    background: #FBBC05;
+    height: 10px;
+    border-radius: 15px;
+    border: 2px solid transparent;
+    background-clip: content-box;
+}
+
+#player {
+    width: 100%;
+    padding: 10px 0;
+}
+
+#player:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#player-info {
+    float: left;
+    width: 33.33%;
+    padding: 0;
+    text-align: center;
+}
