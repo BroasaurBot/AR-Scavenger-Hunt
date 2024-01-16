@@ -10,8 +10,6 @@ This is a web-based augmented reality scavenger hunt game inspired by Disney cha
 
 ## Credits
 
-This project was created by [INSERT YOUR NAME HERE] for [INSERT YOUR PURPOSE HERE], using the following resources:
-
 - AR.js (https://github.com/jeromeetienne/AR.js/)
 - Aframe (https://aframe.io/)
 - Firebase (https://firebase.google.com/)
