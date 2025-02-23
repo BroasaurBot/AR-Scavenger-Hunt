@@ -1,0 +1,11 @@
+Model Information:
+* title:	vanilla icecream
+* source:	https://sketchfab.com/3d-models/vanilla-icecream-8aa747e908c441b388d13d225f276b1a
+* author:	argus-3Dteam (https://sketchfab.com/argus-3Dteam)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "vanilla icecream" (https://sketchfab.com/3d-models/vanilla-icecream-8aa747e908c441b388d13d225f276b1a) by argus-3Dteam (https://sketchfab.com/argus-3Dteam) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

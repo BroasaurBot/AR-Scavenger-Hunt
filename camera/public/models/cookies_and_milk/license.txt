@@ -1,0 +1,11 @@
+Model Information:
+* title:	Cookies and milk
+* source:	https://sketchfab.com/3d-models/cookies-and-milk-e138102109354fa5b38b39e99d6a7a10
+* author:	DrRygel (https://sketchfab.com/DrRygel)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Cookies and milk" (https://sketchfab.com/3d-models/cookies-and-milk-e138102109354fa5b38b39e99d6a7a10) by DrRygel (https://sketchfab.com/DrRygel) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

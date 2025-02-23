@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react';
 import { doc, onSnapshot } from 'firebase/firestore';
 import {useNavigate} from 'react-router-dom';
 
-import markers from '../info.js';
+import markerInfo from '../info.js';
 import GDSC_logo from '../components/GDSC_logo';
 import BackButton from '../components/BackButton';
 import Button from '../components/Button';
@@ -13,7 +13,7 @@ import "./css/clues.css"
 
 function MarkerInfo({id, name, info, collected}) {
   return (
-    <div class="marker-info shadow_box center">
+    <div className="marker-info shadow_box center">
       <div className="text-lg">
         {!collected && `Clue #${id}`}
         {collected && `${id} - ${name}`}
@@ -26,7 +26,6 @@ function MarkerInfo({id, name, info, collected}) {
 }
 
 function Clues() {
-
   const [option, setOption] = useState(0)
   const [user, setUser] = useState(null);
   const [collected, setCollected] = useState([]);
@@ -52,7 +51,7 @@ function Clues() {
   return (
     <div className="column mobile-width">
       <GDSC_logo></GDSC_logo>
-      <BackButton></BackButton>
+      <BackButton home></BackButton>
 
       <div className="title">Clues & Collected</div>
       <p className="text-md center pb-md">
@@ -66,8 +65,8 @@ function Clues() {
 
       {option===0 &&
         <p className="text-md center pb-md">
-          {collected.length === markers.length && "Congratulations you have collected all the markers!"}
-          {collected.length !== markers.length &&  "Here are some handy clue to help you find the remaining " + (markers.length - collected.length) + " markers!"}
+          {collected.length === markerInfo.length && "Congratulations you have collected all the markers!"}
+          {collected.length !== markerInfo.length &&  "Here are some handy clue to help you find the remaining " + (markerInfo.length - collected.length) + " markers!"}
         </p>}
       {option===1 &&
         <p className="text-md center pb-md">
@@ -76,17 +75,17 @@ function Clues() {
         </p>}
 
         <div id="list" className="column">
-          {markers.map((marker, index) => {
+          {markerInfo.map((marker, index) => {
             if (option === 1 && collected.includes(marker.id)) {
               return (
-                <MarkerInfo key={marker.id} id={marker.id} name={marker.name} info={marker.info} collected={true} />
+                <MarkerInfo key={marker.id} id={marker.id} name={marker.name} info={marker.description} collected={true} />
               )
             }else if (option === 0 && !collected.includes(marker.id)) {
               return (
                 <MarkerInfo key={marker.id} id={marker.id} name={marker.name} info={marker.clue} collected={false} />
               )
             }
-            return (<div></div>);
+            return (<></>);
           })}
         </div>
     </div>

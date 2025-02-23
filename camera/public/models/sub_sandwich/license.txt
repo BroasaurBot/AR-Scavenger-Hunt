@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sub Sandwich (Game Ready / 2K PBR)
+* source:	https://sketchfab.com/3d-models/sub-sandwich-game-ready-2k-pbr-b7aa7644a6f9481b89da16eb2b9ca39b
+* author:	Meerschaum Digital (https://sketchfab.com/meerschaumdigital)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sub Sandwich (Game Ready / 2K PBR)" (https://sketchfab.com/3d-models/sub-sandwich-game-ready-2k-pbr-b7aa7644a6f9481b89da16eb2b9ca39b) by Meerschaum Digital (https://sketchfab.com/meerschaumdigital) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

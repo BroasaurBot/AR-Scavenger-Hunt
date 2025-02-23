@@ -12,13 +12,12 @@ function Home() {
         Welcome
       </div>
       <p className="text-md center pb-md">
-        Find all the GDSC posters/markers around the campus, meeting all the iconic food that have made their way to USYD.
+        Find all the GDSC posters/markers around the campus, meeting all the iconic food that have made their way to USYD. Collect the most points and win prizes!
       </p>
       <Button  size={20} back_color="#4285F4" color="#FFFFFF" redirect={"https://gdsc-ar-hunt-camera.web.app/"}>Play Now</Button>
       <Button  size={15} redirect={"/Stats"}>Leaderboard</Button>
       <Button  size={15} redirect={"/Clues"}>Clues</Button>
       <Button  size={15} redirect={"/Rules"}>Rules / Tips</Button>
-      <Button  size={15} redirect={"/Team"}>The Team</Button>
       <div className="pb-md"></div>
 
       <p className="text-sm center">

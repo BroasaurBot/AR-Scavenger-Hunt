@@ -1,5 +1,5 @@
 import React from 'react'
-import {addUserLeaderboard, getPosition } from '../util/leaderboard'
+import {addUserLeaderboard, getPosition, removeFakePlayers } from '../util/leaderboard'
 import { auth, db } from '../firebase';
 import { doc, onSnapshot, query, collection } from 'firebase/firestore';
 import { onAuthStateChanged } from 'firebase/auth';
@@ -62,42 +62,47 @@ function Stats() {
   useEffect(() => {
     if (userInfo && leaderboard) {
       console.log("Adding user to leaderboard");
-      addUserLeaderboard(userInfo);
+      addUserLeaderboard(userInfo, user);
       setPosition(getPosition(leaderboard, userInfo)) 
     }
   }, [userInfo, leaderboard]);
     
   return (
-    <div id="stats" class="column mobile-width">
+    <div id="stats" className="column mobile-width">
       <BackButton home></BackButton>
       <GDSC_logo></GDSC_logo>
-      <div class="title mb-md">
+      <div className="title mb-md">
         Leaderboard
       </div>
 
       {userInfo && position && 
-        <div class="shadow_box mb-md" id="info">
-          <div class="center-tag round-border yellow-back white-text">You achievements</div>
-          <p class="text-md">Points: {userInfo.points}pts</p>
-          <p class="text-md">Position: {position.pos}</p>
-          <p class="text-md">Prize-tier level: {position.status}</p>
-          <p class="text-md">Unlock next tier by earning: {position.next}pts</p>
+        <div className="shadow_box mb-md" id="info">
+          <div className="center-tag round-border yellow-back white-text">You achievements</div>
+          <p className="text-md">Points: {userInfo.points}pts</p>
+          {position.status === "NONE" && <p className="text-md">Earn more than 500pts to compete in the leaderboard</p>}
+          {position.status !== "NONE" &&
+            <>
+              <p className="text-md">Position: {position.pos}</p>
+              <p className="text-md">Prize-tier level: {position.status}</p>
+              <p className="text-md">Unlock next tier by earning: {position.next}pts</p>
+            </>
+          }
         </div>
       }
 
       <div id='leaderboard'>
-        <div id="board-title" class="mb-sm">
-          <p class="text-lg bold green-text">Name</p>
-          <p class="text-lg bold blue-text">Points</p>
-          <p class="text-lg bold red-text">Rank</p>
+        <div id="board-title" className="mb-sm">
+          <p className="text-lg bold green-text">Name</p>
+          <p className="text-lg bold blue-text">Points</p>
+          <p className="text-lg bold red-text">Rank</p>
         </div>
         <div id="board-list">
           {leaderboard && leaderboard.map((player, index) => {
             return (
-              <div id="player" class='shadow_box' key={player.name}>
-                <div id="player-info" class="text-md">{player.name}</div>
-                <div id="player-info" class="text-md">{player.points}pts</div>
-                <div id="player-info" class="text-md">{index + 1}</div>
+              <div id="player" className='shadow_box' key={player.name}>
+                <div id="player-info" className="text-md">{player.name}</div>
+                <div id="player-info" className="text-md">{player.points}pts</div>
+                <div id="player-info" className="text-md">{index + 1}</div>
               </div>
             )
           })}

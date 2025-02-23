@@ -1,0 +1,11 @@
+Model Information:
+* title:	Sundae
+* source:	https://sketchfab.com/3d-models/sundae-c2fd1ec753454b1487e6def35141f76a
+* author:	DownRev (https://sketchfab.com/downrev)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Sundae" (https://sketchfab.com/3d-models/sundae-c2fd1ec753454b1487e6def35141f76a) by DownRev (https://sketchfab.com/downrev) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

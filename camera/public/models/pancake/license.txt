@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pancake
+* source:	https://sketchfab.com/3d-models/pancake-d37994dac4c04873989304622e675b47
+* author:	horse_water (https://sketchfab.com/keitamamizu)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pancake" (https://sketchfab.com/3d-models/pancake-d37994dac4c04873989304622e675b47) by horse_water (https://sketchfab.com/keitamamizu) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

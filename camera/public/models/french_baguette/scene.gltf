@@ -1,0 +1,305 @@
+{
+  "accessors": [
+    {
+      "bufferView": 2,
+      "componentType": 5126,
+      "count": 3487,
+      "max": [
+        1.2015631198883057,
+        2.8750243186950684,
+        0.38694921135902405
+      ],
+      "min": [
+        -1.2319573163986206,
+        -2.875260353088379,
+        -0.31802210211753845
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 2,
+      "byteOffset": 41844,
+      "componentType": 5126,
+      "count": 3487,
+      "max": [
+        0.9985319972038269,
+        0.9902845025062561,
+        0.9999591112136841
+      ],
+      "min": [
+        -0.9989110231399536,
+        -0.9809020161628723,
+        -0.9999824166297913
+      ],
+      "type": "VEC3"
+    },
+    {
+      "bufferView": 3,
+      "componentType": 5126,
+      "count": 3487,
+      "max": [
+        0.9995171427726746,
+        0.9997971653938293,
+        0.9999736547470093,
+        1.0
+      ],
+      "min": [
+        -0.9997766017913818,
+        -0.9929461479187012,
+        -0.997391402721405,
+        -1.0
+      ],
+      "type": "VEC4"
+    },
+    {
+      "bufferView": 1,
+      "componentType": 5126,
+      "count": 3487,
+      "max": [
+        0.9998649954795837,
+        0.9745221138000488
+      ],
+      "min": [
+        5.0999999075429514e-05,
+        0.0004357330617494881
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 1,
+      "byteOffset": 27896,
+      "componentType": 5126,
+      "count": 3487,
+      "max": [
+        0.9998649954795837,
+        0.9745221138000488
+      ],
+      "min": [
+        5.0999999075429514e-05,
+        0.0004357330617494881
+      ],
+      "type": "VEC2"
+    },
+    {
+      "bufferView": 0,
+      "componentType": 5125,
+      "count": 18600,
+      "type": "SCALAR"
+    }
+  ],
+  "asset": {
+    "extras": {
+      "author": "Rainbow (https://sketchfab.com/encoded01)",
+      "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+      "source": "https://sketchfab.com/3d-models/french-baguette-b6c483995db04698bf5041c9cef369c0",
+      "title": "French baguette"
+    },
+    "generator": "Sketchfab-14.67.0",
+    "version": "2.0"
+  },
+  "bufferViews": [
+    {
+      "buffer": 0,
+      "byteLength": 74400,
+      "name": "floatBufferViews",
+      "target": 34963
+    },
+    {
+      "buffer": 0,
+      "byteLength": 55792,
+      "byteOffset": 74400,
+      "byteStride": 8,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 83688,
+      "byteOffset": 130192,
+      "byteStride": 12,
+      "name": "floatBufferViews",
+      "target": 34962
+    },
+    {
+      "buffer": 0,
+      "byteLength": 55792,
+      "byteOffset": 213880,
+      "byteStride": 16,
+      "name": "floatBufferViews",
+      "target": 34962
+    }
+  ],
+  "buffers": [
+    {
+      "byteLength": 269672,
+      "uri": "scene.bin"
+    }
+  ],
+  "extensionsUsed": [
+    "KHR_materials_specular"
+  ],
+  "images": [
+    {
+      "uri": "textures/3DModel_baseColor.jpeg"
+    },
+    {
+      "uri": "textures/3DModel_normal.png"
+    }
+  ],
+  "materials": [
+    {
+      "doubleSided": true,
+      "extensions": {
+        "KHR_materials_specular": {
+          "specularColorFactor": [
+            1.0,
+            1.0,
+            1.0
+          ],
+          "specularFactor": 0.010647165116236623
+        }
+      },
+      "name": "3DModel",
+      "normalTexture": {
+        "index": 1
+      },
+      "pbrMetallicRoughness": {
+        "baseColorTexture": {
+          "index": 0
+        },
+        "metallicFactor": 0.0,
+        "roughnessFactor": 0.3756928262443494
+      }
+    }
+  ],
+  "meshes": [
+    {
+      "name": "Object_0",
+      "primitives": [
+        {
+          "attributes": {
+            "NORMAL": 1,
+            "POSITION": 0,
+            "TANGENT": 2,
+            "TEXCOORD_0": 3,
+            "TEXCOORD_1": 4
+          },
+          "indices": 5,
+          "material": 0,
+          "mode": 4
+        }
+      ]
+    }
+  ],
+  "nodes": [
+    {
+      "children": [
+        1
+      ],
+      "matrix": [
+        0.9737586379051208,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.1621785204597918e-16,
+        -0.9737586379051208,
+        0.0,
+        0.0,
+        0.9737586379051208,
+        2.1621785204597918e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "Sketchfab_model"
+    },
+    {
+      "children": [
+        2
+      ],
+      "name": "root"
+    },
+    {
+      "children": [
+        3
+      ],
+      "matrix": [
+        1.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        2.220446049250313e-16,
+        1.0,
+        0.0,
+        0.0,
+        -1.0,
+        2.220446049250313e-16,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ],
+      "name": "GLTF_SceneRootNode"
+    },
+    {
+      "children": [
+        4
+      ],
+      "matrix": [
+        0.051939936314022155,
+        -3.516952461350993e-08,
+        -0.017616521878907138,
+        0.0,
+        0.017616521878904067,
+        -1.0487595958050943e-08,
+        0.05193993631403405,
+        0.0,
+        -3.667454502925984e-08,
+        -0.05484611913560593,
+        1.364537439534307e-09,
+        0.0,
+        0.003759881481528282,
+        0.021607764065265656,
+        0.005700979381799698,
+        1.0
+      ],
+      "name": "3DModel_1"
+    },
+    {
+      "mesh": 0,
+      "name": "Object_4"
+    }
+  ],
+  "samplers": [
+    {
+      "magFilter": 9729,
+      "minFilter": 9987,
+      "wrapS": 10497,
+      "wrapT": 10497
+    }
+  ],
+  "scene": 0,
+  "scenes": [
+    {
+      "name": "Sketchfab_Scene",
+      "nodes": [
+        0
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "sampler": 0,
+      "source": 0
+    },
+    {
+      "sampler": 0,
+      "source": 1
+    }
+  ]
+}

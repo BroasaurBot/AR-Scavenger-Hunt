@@ -1,0 +1,11 @@
+Model Information:
+* title:	Pavlova
+* source:	https://sketchfab.com/3d-models/pavlova-030f246604904cdf848356a5d6b7c1e0
+* author:	maccanz (https://sketchfab.com/maccanz)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Pavlova" (https://sketchfab.com/3d-models/pavlova-030f246604904cdf848356a5d6b7c1e0) by maccanz (https://sketchfab.com/maccanz) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

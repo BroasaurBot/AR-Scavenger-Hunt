@@ -75,6 +75,10 @@
     font-weight: bold;
 }
 
+.left {
+    text-align: left;
+}
+
 .white-text {
     color: #FFFFFF;
 }

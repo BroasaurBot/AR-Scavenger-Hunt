@@ -1,0 +1,11 @@
+Model Information:
+* title:	French baguette
+* source:	https://sketchfab.com/3d-models/french-baguette-b6c483995db04698bf5041c9cef369c0
+* author:	Rainbow (https://sketchfab.com/encoded01)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "French baguette" (https://sketchfab.com/3d-models/french-baguette-b6c483995db04698bf5041c9cef369c0) by Rainbow (https://sketchfab.com/encoded01) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

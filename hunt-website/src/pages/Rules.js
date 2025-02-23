@@ -6,6 +6,8 @@ import GDSC_logo from '../components/GDSC_logo';
 import Button from '../components/Button';
 import BackButton from '../components/BackButton';
 
+import "./css/rules.css"
+
 
 function Rules() {
 
@@ -21,48 +23,57 @@ function Rules() {
   });
 
   return (
-    <div class="column mobile-width pb-md">
-      <BackButton></BackButton>
+    <div className="column mobile-width pb-md">
+      <BackButton home></BackButton>
       <GDSC_logo></GDSC_logo>
 
-      <div class="title">
+      <div className="title">
         Rules
       </div>
-      <div id="rules" class="round-border mb-md">
-        <p class="text-md center">
+      <div id="rules" className="round-border mb-md">
+        <p className="text-md center">
         Always abide by these to ensure others can also have a great time: <br/>
         </p>
-        <ul id="list" class="left text-md pb-sm">
+        <ul id="list" className="left text-md pb-sm">
           <li>★ Do not enter any areas that are usually restricted for students</li>
           <li>★ Do not damage the posters</li>
           <li>★ Never share the location of a poster with any other competitor</li>
           </ul>
-        <p class="text-md">
-          Once you have logged in via Google, points can be awarded for each marker you scan. More points are awarded earlier in the competition than later, so get hunting right away! 
-        </p>
       </div>
 
-      <div class="title">
+      <div className="title">
         Tips and Tricks
       </div>
-      <div id="rules" class="round-border mb-md">
-        <p class="text-md center">
-        Always abide by these to ensure others can also have a great time: <br/>
+      <div id="rules" className="round-border mb-md">
+        <p className="text-md center">
+          There are a couple of tips to keep in mind when looking for the posters<br/>
         </p>
-        <ul id="list" class="left text-md pb-sm">
-          <li>★ Do not enter any areas that are usually restricted for students</li>
-          <li>★ Do not damage the posters</li>
-          <li>★ Never share the location of a poster with any other competitor</li>
+        <ul id="list" className="left text-md pb-sm">
+          <li>★ Posters will be hidden near important features</li>
+          <li>★ Usually hidden around a corner, to keep it from direct view</li>
+          <li>★ Posters are in generally busy areas of the university</li>
           </ul>
-        <p class="text-md">
-          Once you have logged in via Google, points can be awarded for each marker you scan. More points are awarded earlier in the competition than later, so get hunting right away! 
+      </div>
+
+      <div className="title">
+        Prizing
+      </div>
+      <div id="rules" className="round-border mb-md">
+        <p className="text-md center">
+          Once you log into your Google account, you can begin scanning posters and earning points. The rules for points and prizes are as follows:<br/>
         </p>
+        <ul id="list" className="left text-md pb-sm">
+          <li>★ Scanner posters earlier in the competition rewards more points, initially 200pts. So get in fast to get bonus points.</li>
+          <li>★ Once you earn 500pts you can enter the leaderboard</li>
+          <li>★ There are 5 tiers of prizes 'Grand', 'High', 'Medium', 'Low'. See the GDSC Scavenger Hunt facebook post for the prizes.</li>
+          <li>★ At the end of the competition, scanning posters will not grant more points. Winners will be announced shortly after.</li>
+          </ul>
       </div>
 
-      <div class="mb-md">
+      <div className="mb-md">
 
       </div>
-      <div class="title">
+      <div className="title">
         Start playing now!
       </div>
       {user && 

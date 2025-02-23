@@ -1,0 +1,11 @@
+Model Information:
+* title:	Buttered Toast
+* source:	https://sketchfab.com/3d-models/buttered-toast-883118b3ac2147249895a78d99417cea
+* author:	timetravelastronaut (https://sketchfab.com/timetravelastronaut)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Buttered Toast" (https://sketchfab.com/3d-models/buttered-toast-883118b3ac2147249895a78d99417cea) by timetravelastronaut (https://sketchfab.com/timetravelastronaut) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

@@ -1,0 +1,11 @@
+Model Information:
+* title:	Burger
+* source:	https://sketchfab.com/3d-models/burger-f6f14b45261f48a98695a7b6df12ccfc
+* author:	nftmodeler (https://sketchfab.com/nftmodeler)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Burger" (https://sketchfab.com/3d-models/burger-f6f14b45261f48a98695a7b6df12ccfc) by nftmodeler (https://sketchfab.com/nftmodeler) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

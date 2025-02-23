@@ -1,0 +1,11 @@
+Model Information:
+* title:	Belgian waffle!
+* source:	https://sketchfab.com/3d-models/belgian-waffle-6ef6c6485f4a4f3daf3c7977e2da72eb
+* author:	anjikosanagi (https://sketchfab.com/anjikosanagi)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Belgian waffle!" (https://sketchfab.com/3d-models/belgian-waffle-6ef6c6485f4a4f3daf3c7977e2da72eb) by anjikosanagi (https://sketchfab.com/anjikosanagi) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

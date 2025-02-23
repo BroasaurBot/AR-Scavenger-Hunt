@@ -1,17 +1,12 @@
-import React from 'react'
-import { onAuthStateChanged, signInWithRedirect} from 'firebase/auth';
+import React, {useState} from 'react'
+import { onAuthStateChanged, signInWithPopup} from 'firebase/auth';
 import {doc , setDoc, getDoc} from 'firebase/firestore';
 import {auth, db, provider} from '../firebase';
 import GDSC_logo from '../components/GDSC_logo';
 import BackButton from '../components/BackButton';
 import Button from '../components/Button';
+import { useNavigate } from 'react-router-dom';
 
-const signIn = () => {
-signInWithRedirect(auth, provider);
-}
-const signOut = () => {
-auth.signOut();
-}
 
 async function setupDocument(user) {
     const ref = doc(db, "players", user.uid);
@@ -22,17 +17,31 @@ async function setupDocument(user) {
             collected: [],
             count: 0,
             points: 0,
-            uid: user.uid
+            uid: user.uid,
+            name: user.displayName
         });
     }
 }
 
 function SignIn() {
+    const navigate = useNavigate();
+    const [signing, setSigning] = useState("");
     onAuthStateChanged(auth, (user) => {
         if (user) {
-            window.history.back();
+            setupDocument(user);
+            navigate("/")
+        } else {
+            setSigning("signIn");
         }
     });
+
+    const signIn = () => {
+        setSigning("loading");
+        signInWithPopup(auth, provider);
+    }
+    const signOut = () => {
+    auth.signOut();
+    }
 
   return (
     <div className="column mobile-width">
@@ -44,7 +53,10 @@ function SignIn() {
         <p className="text-md mb-md">
             Sign in with your Google account to start hunting!
         </p>
-        <Button size={25} back_color="#4285F4" onClick={signIn}>Sign In</Button>
+        {signing === "signIn" && 
+            <Button size={25} back_color="#4285F4" onClick={signIn}>Sign In</Button>
+        }  
+        {signing === "loading" && <div className="lds-dual-ring"></div>}
     </div>
   )
 }

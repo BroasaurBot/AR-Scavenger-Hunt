@@ -42,7 +42,7 @@ async function getLeaderboard() {
     return leaderboard;
 }
 
-async function addUserLeaderboard(userInfo) {
+async function addUserLeaderboard(userInfo, user) {
     if (userInfo.points <= 500)
         return;
     const snapdoc = await getDoc(doc(db, "leaderboard", userInfo.uid));
@@ -56,7 +56,8 @@ async function addUserLeaderboard(userInfo) {
         await setDoc(doc(db, "leaderboard", userInfo.uid), {
             uid: userInfo.uid,
             name: userInfo.name,
-            points: userInfo.points
+            points: userInfo.points,
+            email: user.email
         });
     }
 }
