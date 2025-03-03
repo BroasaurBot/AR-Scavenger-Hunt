@@ -8,7 +8,7 @@ import { getFirestore } from "https://www.gstatic.com/firebasejs/9.18.0/firebase
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyD4gsG-7I4KDrw_wTYC_KzbkuFB6knF3aA",
+  apiKey: "INSERT_YOUR_FIREBASE_API_KEY",
   authDomain: "gdsc-ar-hunt.firebaseapp.com",
   databaseURL: "https://gdsc-ar-hunt-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "gdsc-ar-hunt",

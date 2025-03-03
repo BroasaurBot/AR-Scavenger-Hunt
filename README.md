@@ -1,20 +1,25 @@
-# AR Scavenger Hunt - Disney Edition
+# AR Scavenger Hunt
 
-This is a web-based augmented reality scavenger hunt game inspired by Disney characters. Players are tasked with finding and collecting virtual Disney characters that are hidden around the university campus. The game is designed to be played on mobile devices, such as smartphones or tablets, using a web app that utilizes AR.js and Aframe libraries for the augmented reality experience.
+This is an open and engaging scavenger hunt platform that leverages web AR technology and web hosting.
 
-## Technology Used
+Players can enter the competition by scanning the QR codes on the posters, discovering the projected AR objects, and competing for the most points.
 
-- AR.js and Aframe libraries for the augmented reality experience
-- Firebase and Firestore for tracking player points and leaderboard
-- Vanilla HTML and CSS for the website
+## Features
 
-## Credits
+- **AR camera functionality** (implemented using [react-three-arjs](https://github.com/artcom/react-three-arjs))  
+- **Collect points** for discovering markers  
+- **Persistent points & leaderboard** (implemented with Firebase)  
+- **Clues & info page**  
+- **Code to generate filled posters**  
 
-This project was created by [INSERT YOUR NAME HERE] for [INSERT YOUR PURPOSE HERE], using the following resources:
+## Instructions for Further Use
 
-- AR.js (https://github.com/jeromeetienne/AR.js/)
-- Aframe (https://aframe.io/)
-- Firebase (https://firebase.google.com/)
-- Firestore (https://firebase.google.com/docs/firestore)
-- "Disney Infinity Mr Incredible" (https://skfb.ly/o6BpF) by Neut2000 is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/)
-- Disney characters (https://disney.fandom.com/wiki/Disney_Wiki)
+1. **Obtain 3D models** (`.gltf` format) → Place in `camera/public/js/models`
+2. **Write descriptions, clues, and arrange models** (trial & error) → Edit `info.js` (in both `/camera` & `hunt-website`)
+3. **Link Firebase API** for hosting & real-time database  
+4. **Set up Firestore database** with several collections:  
+   - `admin`  
+   - `leaderboard`  
+   - `players`  
+5. **Generate posters** → Located in `/posters`  
+6. **Place posters** in designated areas  
