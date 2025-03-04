@@ -12,6 +12,10 @@ Players can enter the competition by scanning the QR codes on the posters, disco
 - **Clues & info page**  
 - **Code to generate filled posters**  
 
+## Demonstration
+https://github.com/user-attachments/assets/58443548-bb4a-4d94-a021-7491d687fefc
+
+
 ## Instructions for Further Use
 
 1. **Obtain 3D models** (`.gltf` format) → Place in `camera/public/js/models`
