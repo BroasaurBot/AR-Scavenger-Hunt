@@ -15,6 +15,9 @@ Players can enter the competition by scanning the QR codes on the posters, disco
 ## Demonstration
 https://github.com/user-attachments/assets/58443548-bb4a-4d94-a021-7491d687fefc
 
+# Currently hosted [HERE](https://gdsc-ar-hunt.web.app/)
+Try opening it on your phone and direct your camera to this marker!
+/Users/rileyjones/Documents/Coding/Javascript/AR/AR-Scavenger-Hunt/posters/markers/00.png
 
 ## Instructions for Further Use
 
